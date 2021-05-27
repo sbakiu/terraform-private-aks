@@ -8,6 +8,11 @@ variable "vnet_resource_group_name" {
   default     = "networks"
 }
 
+variable "kube_resource_group_name" {
+  description = "The resource group name to be created"
+  default     = "nopublicipaks"
+}
+
 variable "hub_vnet_name" {
   description = "Hub VNET name"
   default     = "hub1-firewalvnet"
@@ -21,11 +26,6 @@ variable "kube_vnet_name" {
 variable "kube_version_prefix" {
   description = "AKS Kubernetes version prefix. Formatted '[Major].[Minor]' like '1.18'. Patch version part (as in '[Major].[Minor].[Patch]') will be set to latest automatically."
   default     = "1.18"
-}
-
-variable "kube_resource_group_name" {
-  description = "The resource group name to be created"
-  default     = "nopublicipaks"
 }
 
 variable "nodepool_nodes_count" {
